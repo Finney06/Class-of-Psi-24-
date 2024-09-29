@@ -15,7 +15,7 @@ h1 {
 }
 
 form {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
     max-width: 400px;
     margin: 35px auto;
     padding: 30px 20px;
@@ -177,4 +177,12 @@ button.active-hover {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Media query for mobile view */
+@media (max-width: 600px) {
+    form {
+        background-color: rgba(255, 255, 255, 0.8); /* More transparent on mobile */
+        width: 75%; /* Ensure it doesn't take the full width */
+    }
 }

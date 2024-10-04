@@ -179,6 +179,22 @@ button.active-hover {
     align-items: center;
 }
 
+
+.helper-text {
+    font-size: 0.9rem;
+    color: #888; /* Subtle color to indicate it's helper text */
+    margin-top: 5px;
+    display: block; /* Make sure it appears below the input */
+}
+
+#dob {
+    border: 2px solid #f0ad4e; /* Highlight input field */
+}
+
+#dob:hover {
+    border: 2px solid #ff9800; /* Highlight more on hover */
+}
+
 /* Media query for mobile view */
 @media (max-width: 600px) {
     form {

@@ -237,6 +237,30 @@ continueButton.addEventListener('click', async function () {
                 submitForm(event); // Call submitForm function
             }
         });
+
+         // Get the Date of Birth input
+    const dobInput = document.getElementById('dob');
+
+    // Set default year to 2000 if the user changes the date
+    dobInput.addEventListener('change', function () {
+        const selectedDate = new Date(this.value);
+        const day = selectedDate.getDate().toString().padStart(2, '0'); // Format day
+        const month = (selectedDate.getMonth() + 1).toString().padStart(2, '0'); // Format month
+
+        // Always reset the year to 2000
+        this.value = `2000-${month}-${day}`;
+    });
+
+     // Add a focus effect to indicate the preset year
+     dobInput.addEventListener('focus', function () {
+        dobInput.style.borderColor = "#ff9800"; // Change border color on focus
+        helperText.style.color = "#ff9800"; // Change helper text color on focus
+    });
+
+    dobInput.addEventListener('blur', function () {
+        dobInput.style.borderColor = "#f0ad4e"; // Revert border color on blur
+        helperText.style.color = "#888"; // Revert helper text color on blur
+    });
   
     const okButton = document.getElementById('ok-button');
     const popupOverlay = document.querySelector('.popup-overlay');
